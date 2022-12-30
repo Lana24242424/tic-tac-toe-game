@@ -1,5 +1,7 @@
 const playerConfigOverlayElement = document.querySelector('#config-overlay');
 const backDropElement = document.getElementById('backdrop');
+const formElement = document.querySelector('form');
+
 
 
 const editPlayer1BtnElement = document.querySelector('#edit-plaer-1-btn');
@@ -13,3 +15,5 @@ editPlayer2BtnElement.addEventListener('click', openPlayerConfig);
 
 cancelConfigBtnElement.addEventListener('click', closePlayerConfig);
 backDropElement.addEventListener('click', closePlayerConfig);
+
+formElement.addEventListener('submit', savePlayerConfig);
