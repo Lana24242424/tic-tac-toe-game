@@ -8,11 +8,15 @@ function closePlayerConfig() {
   backDropElement.style.display = "none";
 }
 
-function savePlayerConfig(event) {
-    event.preventDefault();
-   const formData = new FormData(event.target);
-   const enteredPlayername = formData.get('playername').trim();
 
-   if (!enteredPlayername) {} // enteredPlayername === ''
-       
+// спросить у Вовы. Почему не показывает сообщение внизу
+function savePlayerConfig(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const enteredPlayername = formData.get("playername").trim();
+
+  if (!enteredPlayername) {   
+    errorsOutputElement.textContent = 'Please enter your name';
+    return;
+  } // enteredPlayername === ''  
 }

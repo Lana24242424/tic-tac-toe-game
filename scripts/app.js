@@ -1,7 +1,7 @@
 const playerConfigOverlayElement = document.querySelector('#config-overlay');
 const backDropElement = document.getElementById('backdrop');
 const formElement = document.querySelector('form');
-
+const errorsOutputElement = document.querySelector('#config-errors');
 
 
 const editPlayer1BtnElement = document.querySelector('#edit-plaer-1-btn');
