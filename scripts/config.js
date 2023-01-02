@@ -6,6 +6,8 @@ function openPlayerConfig() {
 function closePlayerConfig() {
   playerConfigOverlayElement.style.display = "none";
   backDropElement.style.display = "none";
+  formElement.firstElementChild.remove('error');
+  errorsOutputElement.textContent = '';
 }
 
 
@@ -15,7 +17,8 @@ function savePlayerConfig(event) {
   const formData = new FormData(event.target);
   const enteredPlayername = formData.get("playername").trim();
 
-  if (!enteredPlayername) {   
+  if (enteredPlayername === '') {   
+    event.target.firstElementChild.classList.add('error');
     errorsOutputElement.textContent = 'Please enter your name';
     return;
   } // enteredPlayername === ''  
