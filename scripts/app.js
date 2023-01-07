@@ -1,3 +1,5 @@
+let editedPlayer = 0;
+
 const playerConfigOverlayElement = document.querySelector('#config-overlay');
 const backDropElement = document.getElementById('backdrop');
 const formElement = document.querySelector('form');
